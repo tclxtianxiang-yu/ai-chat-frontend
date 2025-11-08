@@ -14,7 +14,7 @@ export default function ChatArea() {
     return (
       <div className="h-full flex items-center justify-center">
         <div className="text-center text-gray-500 dark:text-gray-400">
-          <p className="text-lg">选择一个对话或创建新对话开始聊天</p>
+          <p className="text-lg">选择一个对话或创建新对话开始聊天!</p>
         </div>
       </div>
     )
