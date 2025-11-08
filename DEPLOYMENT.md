@@ -12,29 +12,20 @@
 
 ### 方法一：通过 Cloudflare Pages Dashboard (推荐)
 
-#### 1. 创建 GitHub 仓库
+#### 1. 推送代码到 GitHub 仓库
 
-如果还没有创建 GitHub 仓库：
+确保代码已推送到 GitHub 仓库（`ai-chat-frontend`）。
 
-```bash
-# 初始化 Git (如果还没有)
-cd frontend
-git init
+使用 Claude Code 的 MCP GitHub 工具推送代码：
 
-# 添加所有文件
-git add .
-
-# 创建初始提交
-git commit -m "Initial commit: AI Chat Frontend"
-
-# 创建 GitHub 仓库并推送（使用 GitHub CLI）
-gh repo create ai-chat-frontend --public --source=. --remote=origin --push
-
-# 或者手动推送到已存在的仓库
-git remote add origin https://github.com/YOUR_USERNAME/ai-chat-frontend.git
-git branch -M main
-git push -u origin main
 ```
+请使用 MCP GitHub 工具将前端代码推送到仓库：
+- 仓库：ai-chat-frontend
+- 分支：main
+- 提交信息：Initial commit: AI Chat Frontend
+```
+
+如果仓库尚未创建，请参考 [GitHub 仓库设置指南](../GITHUB_SETUP.md)。
 
 #### 2. 连接到 Cloudflare Pages
 
@@ -166,25 +157,31 @@ Cloudflare 会自动为你配置 DNS 记录（如果域名在 Cloudflare 管理�
 
 配置后，每次推送到 GitHub 的 `main` 分支都会自动触发部署：
 
-```bash
-# 修改代码后
-git add .
-git commit -m "Update feature"
-git push origin main
+使用 Claude Code 的 MCP GitHub 工具推送更新：
 
-# Cloudflare Pages 会自动部署新版本
+```
+请使用 MCP GitHub 工具推送更改：
+- 仓库：ai-chat-frontend
+- 分支：main
+- 提交信息：Update feature
+
+Cloudflare Pages 会自动部署新版本
 ```
 
 ### 预览部署
 
 推送到其他分支会创建预览部署：
 
-```bash
-# 创建功能分支
-git checkout -b feature/new-ui
-git push origin feature/new-ui
+使用 Claude Code 的 MCP GitHub 工具管理分支：
 
-# 会得到预览 URL: https://abc123.ai-chat-frontend.pages.dev
+```
+请使用 MCP GitHub 工具创建并推送功能分支：
+- 仓库：ai-chat-frontend
+- 新分支：feature/new-ui
+- 基于分支：main
+- 推送更改到新分支
+
+会得到预览 URL: https://abc123.ai-chat-frontend.pages.dev
 ```
 
 ## ✅ 验证部署

@@ -20,8 +20,8 @@ export default function MessageBubble({ message }: MessageBubbleProps) {
           max-w-[80%] rounded-bubble px-4 py-3
           ${
             isUser
-              ? 'bg-light-primary dark:bg-dark-primary text-white rounded-br-md'
-              : 'bg-light-bg-secondary dark:bg-dark-bg-secondary text-light-text dark:text-dark-text rounded-bl-md'
+              ? 'bg-light-primary dark:bg-dark-primary text-white rounded-br-md shadow-lg'
+              : 'glass-light dark:glass-dark text-light-text dark:text-dark-text rounded-bl-md'
           }
         `}
       >

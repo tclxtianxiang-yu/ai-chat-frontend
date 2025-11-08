@@ -8,25 +8,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        // 浅色主题
+        // 浅色主题 - 更新为淡紫色系
         light: {
           bg: '#FFFFFF',
           'bg-secondary': '#F7F7F8',
           text: '#2D2D2D',
           'text-secondary': '#6B7280',
           border: '#E5E5E5',
-          primary: '#2563EB',
-          'primary-hover': '#1D4ED8',
+          primary: '#9333EA',        // 淡紫色
+          'primary-hover': '#7E22CE', // 深紫色
         },
-        // 深色主题
+        // 深色主题 - 更新为紫色系
         dark: {
           bg: '#0F0F0F',
           'bg-secondary': '#1F1F1F',
           text: '#ECECEC',
           'text-secondary': '#9CA3AF',
           border: '#3F3F3F',
-          primary: '#60A5FA',
-          'primary-hover': '#3B82F6',
+          primary: '#C084FC',        // 亮紫色
+          'primary-hover': '#A855F7', // 中紫色
         },
       },
       borderRadius: {
@@ -51,7 +51,30 @@ export default {
           '100%': { transform: 'translateX(0)' },
         },
       },
+      backdropBlur: {
+        xs: '2px',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.glass-light': {
+          'backdrop-filter': 'blur(10px) saturate(180%)',
+          '-webkit-backdrop-filter': 'blur(10px) saturate(180%)',
+          'background': 'rgba(255, 255, 255, 0.75)',
+          'border': '1px solid rgba(255, 255, 255, 0.3)',
+          'box-shadow': '0 8px 32px 0 rgba(147, 51, 234, 0.1)',
+        },
+        '.glass-dark': {
+          'backdrop-filter': 'blur(10px) saturate(180%)',
+          '-webkit-backdrop-filter': 'blur(10px) saturate(180%)',
+          'background': 'rgba(15, 15, 15, 0.7)',
+          'border': '1px solid rgba(255, 255, 255, 0.1)',
+          'box-shadow': '0 8px 32px 0 rgba(142, 45, 226, 0.2)',
+        },
+      }
+      addUtilities(newUtilities)
+    },
+  ],
 }

@@ -11,7 +11,7 @@ function App() {
   }, [initialize])
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden bg-white dark:bg-dark-bg">
+    <div className="flex h-screen w-screen overflow-hidden">
       {/* 侧边栏 */}
       <Sidebar />
 

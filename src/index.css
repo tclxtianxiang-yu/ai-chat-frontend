@@ -6,8 +6,17 @@
 @layer base {
   body {
     @apply font-sans antialiased;
-    @apply bg-white text-light-text;
-    @apply dark:bg-dark-bg dark:text-dark-text;
+    @apply text-light-text dark:text-dark-text;
+
+    /* 浅色模式 - 淡紫色渐变背景 */
+    background: linear-gradient(135deg, #E0C3FC 0%, #8EC5FC 100%);
+    background-attachment: fixed;
+  }
+
+  /* 深色模式 - 深紫色渐变背景 */
+  .dark body {
+    background: linear-gradient(135deg, #4A00E0 0%, #8E2DE2 100%);
+    background-attachment: fixed;
   }
 
   #root {

@@ -9,7 +9,7 @@ export default function ChatHeader({ conversation }: ChatHeaderProps) {
   const { toggleSidebar } = useChatStore()
 
   return (
-    <header className="border-b border-light-border dark:border-dark-border px-6 py-4 flex items-center gap-4">
+    <header className="border-b border-light-border dark:border-dark-border px-6 py-4 flex items-center gap-4 glass-light dark:glass-dark">
       {/* 移动端菜单按钮 */}
       <button
         onClick={toggleSidebar}

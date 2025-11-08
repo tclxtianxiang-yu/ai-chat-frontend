@@ -97,7 +97,7 @@ export default function MessageInput({ conversationId }: MessageInputProps) {
   }
 
   return (
-    <div className="border-t border-light-border dark:border-dark-border p-6">
+    <div className="border-t border-light-border dark:border-dark-border p-6 glass-light dark:glass-dark">
       <div className="max-w-4xl mx-auto">
         <div className="flex gap-4 items-end">
           <div className="flex-1 relative">
@@ -114,7 +114,8 @@ export default function MessageInput({ conversationId }: MessageInputProps) {
               disabled={isSubmitting}
               className="
                 w-full px-4 py-3 pr-12
-                bg-white dark:bg-dark-bg
+                bg-white/50 dark:bg-dark-bg/50
+                backdrop-blur-sm
                 border border-light-border dark:border-dark-border
                 rounded-xl resize-none
                 focus:outline-none focus:ring-2 focus:ring-light-primary dark:focus:ring-dark-primary

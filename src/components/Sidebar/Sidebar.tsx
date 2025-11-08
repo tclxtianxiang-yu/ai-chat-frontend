@@ -12,7 +12,7 @@ export default function Sidebar() {
       <aside
         className={`
           fixed lg:relative top-0 left-0 h-full z-40
-          bg-light-bg-secondary dark:bg-dark-bg-secondary
+          glass-light dark:glass-dark
           border-r border-light-border dark:border-dark-border
           transition-transform duration-300 ease-in-out
           ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0 lg:w-0'}
