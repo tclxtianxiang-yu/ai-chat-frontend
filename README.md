@@ -7,7 +7,7 @@
 查看 [TECH_STACK.md](./TECH_STACK.md) 了解详细的技术选型说明。
 
 核心技术：
-- React 18 + TypeScript
+- React18 + TypeScript
 - Vite - 构建工具
 - urql - GraphQL 客户端
 - Tailwind CSS - 样式框架
