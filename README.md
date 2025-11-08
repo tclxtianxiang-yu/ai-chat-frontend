@@ -12,7 +12,7 @@
 - urql - GraphQL 客户端
 - Tailwind CSS - 样式框架
 - Zustand - 状态管理
-- react-markdown - Markdown 渲染
+- react-markdown - Markdown 渲染 
 
 ## 快速开始
 
